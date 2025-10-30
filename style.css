@@ -185,18 +185,31 @@ body{
     margin-bottom: 20px;
 }
 .projects-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    padding: 20px;
 }
 .projects-items-div{
-    height: 200px;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid red;
     border-radius: 10px;
+    width: 300px;
+    max-width: 60%;
+    min-height: 350px;
     font-size: 30px;
     text-align: center;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.links-img img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 .projects-items-div a{
     color: white;
@@ -204,7 +217,9 @@ body{
 .links-a{
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 15px;
+    margin-top: 10px;
+    min-height: 40px;
 }
 .projects-items-div a:hover{
     color: red;
@@ -250,14 +265,17 @@ body{
     padding: 20px 40px;
     min-width: 400px;
     transition: transform 0.2s ease;
+    color: white;
 }
 .stats-box:hover{
     transform: translateY(-5px);
 }
 .stats-box h3{
-    color: #8b949e;
     margin: 0;
     font-size: 40px;
+}
+.stats-box p{
+    color: white;
 }
 .get-in-touch{
     font-size: 50px;
@@ -318,4 +336,95 @@ body{
     text-align: center;
     padding-top: 30px;
     color: white;
+}
+@media (max-width: 900px){
+    .aboutMe{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .aboutMe-Image img{
+        width: 250px;
+    }
+    .timeline-item{
+        width: 100%;
+        left: 0;
+    }
+    .timeline-line{
+        left: 20px;
+    }
+    .timeline-item .content{
+        max-width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-left: 50px;
+    }
+    .projects-items-div{
+        width: 45%;
+    }
+    .stats-box{
+        width: 300px;
+    }
+    .contact{
+        width: 80%;
+    }
+}
+@media (max-width: 600px){
+    .header{
+        height: auto;
+        padding: 80px 20px;
+        background-size: cover;
+    }
+    .header .name{
+        font-size: 36px;
+        margin-top: 100px;
+    }
+    .header p strong{
+        font-size: 50px;
+    }
+    .header p{
+        font-size: 30px;
+    }
+    .aboutMe{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .aboutMe-Image img{
+        width: 200px;
+    }
+    .timeline-item{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .timeline-line{
+        left: 15px;
+    }
+    .timeline-item .content{
+        margin-left: 40px;
+    }
+    .projects-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects-items-div{
+        width: 90%;
+        font-size: 22px;
+    }
+    .links-a{
+        flex-direction: column;
+        gap: 8px;
+    }
+    .stats-box{
+        width: 100%;
+        min-width: unset;
+        padding: 15px;
+    }
+    .contact{
+        width: 90%;
+    }
+    .footer{
+        font-size: 14px;
+    }
 }
