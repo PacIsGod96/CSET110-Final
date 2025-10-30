@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+.header{
+    color: white;
+    background-image: url(images/dark-red-background-with-colorful-stars-vector.jpg);
+    width: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+.header .name{
+    font-size: 50px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 15px;
+    margin-top: 300px;
+}
+.header p strong{
+    font-size: 80px;
+}
+.header p{
+    font-size: 50px;
+    font-family: "Goldman", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.aboutMe{
+   color: white;
+   text-align: center;
+   font-size: 20px;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: center;
+    
+}
+.aboutMe-Image img{
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.aboutMe-Text{
+    max-width: 600px;
+    text-align: center;
+}
+.appear{
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.appear.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.icons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.icons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid red ;
+}
+.download-resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.download-resume img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+.timeline-section{
+    width: 100%;
+    max-width: 1000px;
+    margin: 150px auto;
+    position: relative;
+    font-family: "Goldman", sans-serif;
+}
+.timeline-title{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+.timeline{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: white;
+}
+.timeline-line{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background-color: red;
+    z-index: 0;
+}
+.timeline-item{
+    position: relative;
+    width: 50%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+    z-index: 1;
+    margin-bottom: 80px;
+}
+.timeline-item:nth-child(odd){
+    left: 0;
+    transform: translateX(0);
+}
+.timeline-item:nth-child(even){
+    left: 50%;
+    transform: translateX(0);
+}
+.timeline-item.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+.timeline-item .content{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 300px;
+    position: relative;
+}
+.timeline-item:nth-child(odd) .content{
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+.timeline-item:nth-child(even) .content{
+    position: absolute;
+    left: 30px;
+    top: 0;
+}
+.timeline-item::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 2;
+}
+.timeline-item:nth-child(odd)::before{
+    right: 0;
+}
+.timeline-item:nth-child(even)::before{
+    left: 0;
+}
+.projects{
+    font-family: "Goldman", sans-serif;
+    color: white;
+}
+.projects h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.projects-items-div{
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+}
+.projects-items-div a{
+    color: white;
+}
+.links-a{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.projects-items-div a:hover{
+    color: red;
+}
+.links img{
+ width: 50px;
+ height: 70px;
+}
+.list-quiz{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+.github-recent-info{
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    font-family: "Goldman", sans-serif;
+}
+.github-recent-info h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: red;
+}
+.github-recent-info p{
+    color: #8b949e;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.github-recent-info .stats{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.stats-box{
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 20px 40px;
+    min-width: 400px;
+    transition: transform 0.2s ease;
+}
+.stats-box:hover{
+    transform: translateY(-5px);
+}
+.stats-box h3{
+    color: #8b949e;
+    margin: 0;
+    font-size: 40px;
+}
+.get-in-touch{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: red;
+}
+.contact{
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    font-family: "Goldman", sans-serif;
+    margin-bottom: 50px;
+}
+.input-box{
+    padding: 20px;
+}
+.input-box label{
+    color: white;
+}
+.contact input,
+.contact select,
+.contact textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.contact textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+.contact button{
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact button:hover{
+    background-color: #0056b3;
+}
+.message-sent{
+    text-align: center;
+    color: green;
+    margin-top: 15px;
+    display: none;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #292a2b;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}

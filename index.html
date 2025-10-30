@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">    
+        <p class="name">Hi, I'm <strong>Collin Williams</strong></p>
+        <p>Software Engineering Student</p>
+    </div>
+    <div class="aboutMe appear">
+        <div class="aboutMe-Image">
+            <img src="images/20250515_044843000_iOS.jpg" alt="" style="width: 300px; ">
+        </div>
+        <div class="aboutMe-Text">
+            <h1>I'm <span style="color: red;">Collin Williams</span> a Computer Software Engineering Student</h1>
+            <br>
+            <p>It is my first year at Thaddeus Stevens College of Technology
+                for Computer Software Engineering. We have so far learned about <span style="color: red;">HTML, CSS, and Java Script.</span>
+            </p>
+            <br>
+            <p>I am not entirely sure what I want to do yet but I am 
+                <span style="color: red;">excited to learn</span> many other lanuges and jobs in this field.
+            </p>
+            <div class="icons">
+                <div class="gMail"><a href="mailto:williamsck233@gmail.com" onclick="navigator.clipboard.writeText(`williamsck233@gmail.com`)"><img src="images/gmail-icon_1273375-1247.avif" alt="" width="50"></a></div>
+                <div class="gitHub"><a href="https://github.com/PacIsGod96" target="_blank" rel="noopener noreferrer"><img src="images/github_logo_icon_229278.png" alt="" width="50"></a></div>
+            </div>
+            <div class="download-resume">
+                <h2>Download resume</h2>
+                <div class="resume"><a href="resume.pdf" download="Williams_Resume.pdf"><img src="images/download-icon-vector-illustration-install-symbol_654297-207.avif" alt="" width="50" ></a></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="timeline-section">
+        <h1 class="timeline-title" style="color: red; font-size: 50px;">My Journey</h1>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-item appear">
+                <div class="content">
+                    <h3> May 2025 - Graduated Hempfield High School</h3>
+                    <p>During that time I took 2 Software Engineering courses</p>
+                </div>
+            </div>
+            <div class="timeline-item appear">
+                <div class="content">
+                    <h3> August 2025 - Started at Thaddeus Stevens College of Technology</h3>
+                    <p>Began working on my degree torwards Software Engineering and started with Web Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects appear">
+        <h1 class="project-section" style="color: red;">Projects</h1>
+        <div class="projects-container">
+            <div class="projects-items-div">
+                <h3 class="projects-item">Grocery List Manager/Quiz</h3>
+                <div class="links">
+                    <div class="links-img list-quiz">
+                        <img src="images/grocery-list-icon-in-illustration-vector.jpg" alt="">
+                        <img src="images/download.jpg" alt="">
+                    </div>
+                    <div class="links-a">
+                        <a href="https://pacisgod96.github.io/CSET105-Final/">View Site</a>
+                        <a href="https://github.com/PacIsGod96/CSET105-Final.git">View Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-items-div">
+                <h3 class="projects-item">Tic Tac Toe website game</h3>
+                <div class="links">
+                    <div class="links-img">
+                        <img src="images/images.png" alt="">
+                    </div>
+                     <div class="links-a">
+                        <a href="https://pacisgod96.github.io/CSET115-Final/">View Site</a>
+                        <a href="https://github.com/PacIsGod96/CSET115-Final.git">View Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-items-div">
+                <h3 class="projects-item">Calculator</h3>
+                <div class="links">
+                    <div class="links-img">
+                        <img src="images/10310245.png" alt="">
+                    </div>
+                     <div class="links-a">
+                        <a href="https://pacisgod96.github.io/CSET115-Weekly-Assignment-1/">View Site</a>
+                        <a href="https://github.com/PacIsGod96/CSET115-Weekly-Assignment-1.git">View Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="github-recent-info appear">
+        <h1>Recent GitHub Activity</h1>
+        <div class="stats">
+            <div class="stats-box">
+                <h3 id="repos"></h3>
+                <p>Public Repositories</p>
+            </div>
+            <div class="stats-box"> 
+                <h3 id="stars"></h3>
+                <p>Total Stars</p>
+            </div>
+            <div class="stats-box">
+                <h3 id="followers"></h3>
+                <p>Followers</p>
+            </div>
+            <div class="stats-box">
+                <h3 id="commits"></h3>
+                <p>Recent Commits</p>
+            </div>
+        </div>
+    </div>
+    <h1 class="get-in-touch">Get In Touch</h1>
+    <div class="contact">
+        <div class="first-last-name">
+            <div class="firstName-div input-box">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="lastName-div input-box">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="email input-box">
+            <label for="Email">Email</label>
+            <input type="text" id="email" placeholder="Email" required>
+        </div>
+        <div class="subject input-box">
+            <label for="subject">Subject</label>
+            <select id="sibject">
+                <option value="">Select a subject</option>
+                <option value="Project Inquiry">Project Inquiry</option>
+                <option value="Job Opportunity">Job Opportunity</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="General Message">General Message</option>
+            </select>
+        </div>
+        <div class="message input-box">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter message here" required></textarea>
+        </div>
+        <button id="submitBtn">Send Message</button>
+        <div class="message-sent" id="success">Message Sent</div>
+    </div>
+    <div class="footer">
+        <h1>williamsck233@gmail.com</h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
